@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "booking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Proof": {
+      "type": "enumeration",
+      "enum": [
+        "Adhar Card",
+        "Passport",
+        "Voter ID",
+        "Driving License"
+      ],
+      "required": true
+    },
+    "StayDays": {
+      "type": "integer",
+      "required": true
+    },
+    "CheckoutDate": {
+      "type": "date",
+      "required": true
+    },
+    "Amount": {
+      "type": "biginteger",
+      "required": true
+    },
+    "FloorNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "RoomNumber": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "RoomType": {
+      "type": "enumeration",
+      "enum": [
+        "Single Room",
+        "Double Room",
+        "Delux"
+      ],
+      "required": true
+    }
+  }
+}
